@@ -29,7 +29,7 @@
 
 <div align="center">
 
-![Image](https://github.com/user-attachments/assets/cea7f7e5-d6a1-4b9f-83f4-cd2a72943448)
+![image](https://github.com/user-attachments/assets/1730fb34-4dce-496c-87d5-11a63da982d8)
 
 </div>
 
