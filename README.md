@@ -13,7 +13,7 @@
 + [🖥  기술스택](#개발-환경)
 + [📄  프로젝트 구조](#프로젝트-구조)
 + [📄  데이터베이스 ERD](#데이터베이스-ERD)
-+ [⚙  페이지별 기능](#페이지별-기능)
++ [⚙  구현한 기능](#구현한-기능)
 <br>
 
 ## 프로젝트 소개
@@ -96,9 +96,9 @@
 <br>
 <br>
 
-## 페이지별 기능
+## 구현한 기능
 
-### 🙎‍♂️ 로그인, 회원가입
+### 🙎‍♂️ 회원가입
 
 <details>
 <summary>초기 화면</summary>
@@ -124,93 +124,6 @@
 - 작성이 완료된 후, 유효성 검사가 통과된 경우 다음 회원가입 버튼이 활성화되며, 버튼을 클릭하면 로그인페이지로 이동합니다.
 
 ![Image](https://github.com/user-attachments/assets/058a5747-18f6-4e72-b892-6d8c0bd1ac90)
-
-</details>
-
-<br>
-
-### 🙎‍♂️ 회원 개인페이지
-
-<details>
-<summary>일반 회원</summary>
-
-<br>
-  
-- 자신의 정보를 확인할 수 있고, 수정 및 프로필 이미지 추가,변경을 할 수 있습니다.
-- 나의 게시글,댓글,리뷰를 볼 수 있고 구매한 상품내역을 확인할 수 있습니다.
-- 각각 `Component`를 만들어 관리되고, 왼쪽에 `li`를 클릭 시 렌더링 되도록 `useEfect`를 활용해 구현했습니다.
-
-![Image](https://github.com/user-attachments/assets/c8320f43-79cf-4059-a570-d16451d73cae)
-
-</details>
-
-<details>
-<summary>멘토 회원</summary>
-
-<br>
-  
-- 일반 회원과 마찬가지로 개인정보를 수정할 수 있습니다.
-- 멘토 회원은 구매내역 대신 내가 등록한 상품과 상품등록을 확인할 수 있습니다.
-
-![Image](https://github.com/user-attachments/assets/f90a1582-fabb-4d90-8794-9ddda0665d6e)
-
-</details>
-
-<br>
-
-### 🛒 상품, 장바구니
-
-<details>
-<summary>상품페이지</summary>
-
-<br>
-   
-- 멘토회원이 등록한 상품을 볼 수 있으며 가격과 카테고리를 확인할 수 있습니다.
-- 원하는 상품을 장바구니에 담을 수 있고, 장바구니에 담을 시 **데이터베이스**에 장바구니정보를 저장합니다.
-- `Redux slice`를 이용해 백엔드 서버에서 장바구니 정보를 가져오고 아이템 선택,전체삭제를 할 수 있습니다.
-
-![Image](https://github.com/user-attachments/assets/fef0e087-9542-4f1c-8555-6e689f9df0d5)
-
-</details>
-<br>
-
-### 💰 결제, 카카오페이
-
-<details>
-<summary>결제</summary>
-
-<br>
-   
-- 결제페이지는 **총 3단계**로 나뉘어 있으며, 각 단계별 **컴포넌트**로 구분하여 관리했습니다.
-- `useState`로 단계별 상태를 관리해 각 단계로 이동할 수 있고, 주문자의 정보확인, 결제방법 선택, 결제완료로 구분됩니다.
-- 결제정보는 데이터베이스에 저장되며, 결제 성공 시 장바구니 데이터와, 장바구니 Slice 아이템이 삭제됩니다.
-
-![Image](https://github.com/user-attachments/assets/d996af72-08a5-4d9f-aea6-fbe6f6cac506)
-
-</details>
-
-<details>
-<summary>카카오페이</summary>
-
-<br>
-   
-- 2단계에서 **카카오페이**를 선택할 시 카카오페이 API에서 제공하는 결제페이지로 이동한 후, 모바일로 결제를 진행합니다.
-- 결제방법이 카카오페이로 데이터베이스에 저장되며, 마찬가지로 장바구니 데이터를 삭제합니다.
-
-![Image](https://github.com/user-attachments/assets/911dce44-bf79-42f2-a2dd-b4e2816fc498)
-
-</details>
-
-<details>
-<summary>결제내역 페이지</summary>
-
-<br>
-   
-- 결제내역 페이지에서는 결제한 목록들을 볼 수 있고, 결제 수단별, 시간별 정렬기능을 구현했습니다.
-<br>
-- 밑에 영상은 결제 기능의 풀영상입니다. 
-
-![Image](https://github.com/user-attachments/assets/2021c2ce-a856-44ae-8396-56c730f2b97b)
 
 </details>
 
@@ -264,22 +177,6 @@
 - 일반 페이지의 레이아웃 위에 나타납니다.
 
 ![Image](https://github.com/user-attachments/assets/34204640-6cdf-458a-a439-2ddc387108cf)
-
-</details>
-<br>
-
-### 🛠️ 관리자페이지
-
-<details>
-<summary>관리자 페이지</summary>
-
-<br>
-
-- 일반 페이지와 구분되도록 **레이아웃**을 변경해 헤더대신 왼쪽 메뉴바가 나타납니다
-- 관리자 페이지는 회원,상품,결제 등 항목별로 페이지로 나뉘고 왼쪽에 메뉴를 클릭 시 각 페이지가 렌더링됩니다.
-- 각 페이지는 목록이 **페이징**으로 구현되었고, 기본적인 CRUD가 전부 가능합니다.
-
-![Image](https://github.com/user-attachments/assets/d8d19f7f-cce5-489d-aafc-d642150a486e)
 
 </details>
 <br>
