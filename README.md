@@ -29,7 +29,7 @@
 
 <div align="center">
 
-![image](https://github.com/user-attachments/assets/1730fb34-4dce-496c-87d5-11a63da982d8)
+![image](https://github.com/user-attachments/assets/a5cd917a-a901-49e1-8364-e5415d23c62f)
 
 </div>
 
@@ -124,21 +124,6 @@
 - 작성이 완료된 후, 유효성 검사가 통과된 경우 다음 회원가입 버튼이 활성화되며, 버튼을 클릭하면 로그인페이지로 이동합니다.
 
 ![Image](https://github.com/user-attachments/assets/058a5747-18f6-4e72-b892-6d8c0bd1ac90)
-
-</details>
-
-<details>
-<summary>로그인</summary>
-
-<br>
-   
-- 이메일과 비밀번호를 입력한 후 DB에서 회원 존재여부를 확인 후 로그인이 진행됩니다.
-- 카카오 소셜로그인으로 로그인할 시 처음 로그인한 경우라면 회원정보 추가작성 페이지로 이동하고, 아닐 시 바로 로그인이 진행됩니다.
-- 일반로그인과 카카오로그인 모두 `JWT`를 발급 후 `React Cookie`에 저장해 로그인상태와 사용자 인증을 합니다.
-- 로그인을 한 후 메인페이지로 이동합니다.
-
-
-![Image](https://github.com/user-attachments/assets/3f4b2681-8be0-491e-b2ff-7237b1da18f1)
 
 </details>
 
