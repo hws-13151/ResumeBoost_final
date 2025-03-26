@@ -2,7 +2,7 @@
 
 ![Image](https://github.com/user-attachments/assets/e4bcc848-5ce9-4859-97a4-7d890e75a035)
 
-
+http://ec2-13-125-236-223.ap-northeast-2.compute.amazonaws.com/
 
 <br>
 
